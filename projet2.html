@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toit d'Étoiles | Kélia Ibara</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/clash-display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-papier">
+
+    <div class="shape s1" style="background: #7e9f6e;"></div>
+    <div class="shape s2" style="background: #7e9f6e;"></div>
+   
+
+    <nav class="nav-project">
+       <a href="portfoliokelia.html#p2" class="back-btn">← Retour</a>
+        <div class="logo">K.I<span>BARA</span></div>
+    </nav>
+
+    <main class="project-detail-container">
+        <header class="project-header">
+            <h1 style="color: #ffffff;">Toit d'Étoiles</h1>
+            <span class="category-tag" style="color: #ffffff;">UI Design / Immobilier</span>
+        </header>
+
+        <section class="project-main-layout">
+            
+            <div class="portrait-frame stack-container">
+                <div class="photo-stack" id="appleStack">
+                    <img src="page1.png" alt="Vue 1" class="stack-img">
+                    <img src="page2.png" alt="Vue 2" class="stack-img">
+                    <img src="page3.png" alt="Vue 3" class="stack-img">
+                </div>
+                <p class="stack-hint">Cliquez sur les photos pour faire défiler</p>
+            </div>
+
+            <div class="project-info-column">
+                <div class="text-block">
+                    <h2 style="color: #7e9f6e;">Le Brief</h2>
+                    <p>Concevoir une interface web luxueuse pour une agence immobilière haut de gamme. L'objectif était de créer une expérience immersive et élégante.</p>
+                </div>
+                
+                <div class="text-block">
+                    <h2 style="color: #7e9f6e;">Mon Rôle</h2>
+                    <p>Conception de la maquette haute fidélité sur Figma, création du système de composants et prototypage des interactions.</p>
+                </div>
+                
+                <div class="text-block">
+                    <h2 style="color: #7e9f6e;">Outils utilisés</h2>
+                    <p>Figma.</p>
+                </div>
+
+                <div class="text-block">
+                    <h2 style="color: #7e9f6e;">Compétences</h2>
+                    <p>UX Design, UI Architecture, Prototypage interactif.</p>
+                </div>
+
+            
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const stack = document.getElementById('appleStack');
+        
+        stack.addEventListener('click', () => {
+            const topCard = stack.lastElementChild;
+            
+            // Animation de sortie (envoi vers la gauche et rotation)
+            topCard.style.transform = "translateX(-120%) rotate(-15deg)";
+            topCard.style.opacity = "0";
+            
+            setTimeout(() => {
+                // On la remet au début de la pile (tout en dessous)
+                stack.prepend(topCard);
+                // On réinitialise son style pour qu'elle reprenne sa place dans la pile
+                topCard.style.transform = "";
+                topCard.style.opacity = "1";
+            }, 400);
+        });
+    </script>
+
+    <footer class="project-footer">
+        <p>© 2024 TOUS DROITS RÉSERVÉS</p>
+    </footer>
+
+</body>
+</html>

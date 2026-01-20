@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratégie Marionnaud | Kélia Ibara</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/clash-display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-papier">
+
+     <div class="shape s1" style="background: #a04a9b;"></div>
+    <div class="shape s2" style="background: #9f49a9;"></div>
+
+    <nav class="nav-project">
+       <a href="portfoliokelia.html#p4" class="back-btn">← Retour</a>
+        <div class="logo">K.I<span>BARA</span></div>
+    </nav>
+
+    <main class="project-detail-container">
+        <header class="project-header">
+            <h1 style="color: #ffffff;">Stratégie Digitale Marionnaud</h1>
+            <span class="category-tag" style="color: #ffffff;">Recommandation / Branding</span>
+        </header>
+
+        <section class="project-main-layout">
+    
+    <div class="project-gallery-column">
+        <div class="gallery-item-small">
+            <img src="ancienlogo.png" alt="Analyse Stratégique">
+        </div>
+        <div class="gallery-item-small">
+            <img src="nouveaulogo1.png" alt="Création de Logos">
+        </div>
+        <div class="gallery-item-small">
+            <img src="nouveaulogo2.png" alt="Supports Digitaux">
+        </div>
+    </div>
+
+    <div class="project-info-column">
+        <div class="text-block">
+            <h2 style="color: #d095e0;">Le Brief</h2>
+            <p>Réaliser une recommandation en communication numérique pour Marionnaud. Analyse des besoins utilisateurs et définition d'objectifs stratégiques adaptés.</p>
+        </div>
+        
+        <div class="text-block">
+            <h2 style="color: #d095e0;">Mon Rôle</h2>
+            <p>Analyse stratégique, création de nouveaux logos et proposition de solutions numériques pour la marque.</p>
+        </div>
+        
+        <div class="text-block">
+            <h2 style="color: #d095e0;">Outils & Référentiels</h2>
+            <p>Google Docs, Illustrator.</p>
+        </div>
+
+        <div class="text-block">
+            <h2 style="color: #d095e0;">Compétences</h2>
+            <p>Stratégie numérique, Branding, Analyse UX, Communication.</p>
+        </div>
+
+        <a href="stratdecomm.pdf" target="_blank" class="stack-btn">
+            Voir l'audit complet PDF
+        </a>
+    </div>
+
+</section>
+    </main>
+
+    <footer class="project-footer">
+        <p>© 2026 KELIA IBARA — TOUS DROITS RÉSERVÉS</p>
+    </footer>
+
+    <script>
+        const stack = document.getElementById('appleStack');
+        
+        stack.addEventListener('click', () => {
+            const topCard = stack.lastElementChild;
+            
+            // Animation de sortie vers la gauche
+            topCard.style.transform = "translateX(-120%) rotate(-10deg)";
+            topCard.style.opacity = "0";
+            
+            setTimeout(() => {
+                // On remet l'image en dessous
+                stack.prepend(topCard);
+                // On réinitialise l'image pour qu'elle reprenne son style CSS (pile)
+                topCard.style.transform = "";
+                topCard.style.opacity = "1";
+            }, 400);
+        });
+    </script>
+
+</body>
+</html>
