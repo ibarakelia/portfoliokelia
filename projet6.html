@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Research - Fablabs | Kélia Ibara</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/clash-display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-papier">
+
+    <div class="shape s1" style="background: #ef3d4c;"></div>
+    <div class="shape s2" style="background: #f02e3e;"></div>
+
+    <nav class="nav-project">
+        <a href="portfoliokelia.html#p6" class="back-btn">← Retour</a>
+        <div class="logo">K.I<span>BARA</span></div>
+    </nav>
+
+    <main class="project-detail-container">
+        <header class="project-header">
+            <h1 style="color: #ffffff;">Recherche UX, Fablabs</h1>
+            <span class="category-tag" style="color: #ffffff;">UX Design / Ergonomie</span>
+        </header>
+
+        <section class="project-main-layout">
+            
+            <div class="portrait-frame stack-container">
+                <div class="photo-stack" id="fablabStack">
+                    <img src="artilect.jpg" alt="Benchmark" class="stack-img">
+                    <img src="lacasemate.jpg" alt="Guide d'entretien" class="stack-img">
+                    <img src="citedessciences.jpg" alt="Personae" class="stack-img">
+                </div>
+                <p class="stack-hint">Cliquez sur les photos pour faire défiler</p>
+            </div>
+
+            <div class="project-info-column">
+                <div class="text-block">
+                    <h2 style="color: #f02e3e;">Le Brief</h2>
+                    <p>Cela ma permis de découvrir les bases de l'UX design, liée avec la ressource « Ergonomie et accessibilité ». En partant du cas des fablabs, nous avons mené une enquête pour comprendre les attentes des utilisateurs et imaginer un service numérique adapté.</p>
+                </div>
+                
+                <div class="text-block">
+                    <h2 style="color: #f02e3e;">Mon Rôle</h2>
+                    <p>J'ai rédigé un guide d'entretien, réalisé une analyse des réponses et construit des personae. J'ai aussi comparé trois fablabs dans un benchmark (La Casemate, Carrefour Numérique, et Artilect) pour analyser leur fonctionnalité et leur accueil.</p>
+                </div>
+                
+                <div class="text-block">
+                    <h2 style="color: #f02e3e;">Outils utilisés</h2>
+                    <p>Méthodes d'enquête, Benchmark, Analyse qualitative, Figma pour les personae.</p>
+                </div>
+
+                <div class="text-block">
+                    <h2 style="color: #f02e3e;">Compétences</h2>
+                    <p>UX Design, Ergonomie, Analyse d'enquête</p>
+                </div>
+
+                <div class="text-block">
+                    <a href="dossierfablab.pdf" target="_blank" class="back-btn" style="background: #f02e3e; color: white !important; border: none; display: block; text-align: center; margin-top: 30px; padding: 15px;">Voir l'étude complète PDF</a>
+                </div>
+                
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const stack = document.getElementById('fablabStack');
+        
+        stack.addEventListener('click', () => {
+            const topCard = stack.lastElementChild;
+            
+            // Animation de sortie
+            topCard.style.transform = "translateX(-120%) rotate(-15deg)";
+            topCard.style.opacity = "0";
+            
+            setTimeout(() => {
+                stack.prepend(topCard);
+                topCard.style.transform = "";
+                topCard.style.opacity = "1";
+            }, 400);
+        });
+    </script>
+
+    <footer>
+        <p>© 2026 KELIA IBARA — TOUS DROITS RÉSERVÉS</p>
+    </footer>
+
+</body>
+</html>
